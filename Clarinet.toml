@@ -1,0 +1,23 @@
+[project]
+name = "june"
+authors = []
+description = ""
+telemetry = false
+requirements = []
+cache_dir = "/home/runner/workspace/june/./.requirements"
+boot_contracts = ["pox", "costs-v2", "bns"]
+[contracts.credential-guard-protocol]
+path = "contracts/credential-guard-protocol.clar"
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
